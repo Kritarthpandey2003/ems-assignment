@@ -45,7 +45,7 @@ export const login = async (req: Request, res: Response) => {
     });
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return res.status(400).json({ message: 'Validation error', errors: error.errors });
+      return res.status(400).json({ message: 'Validation error', errors: (error as any).errors });
     }
     console.error(error);
     res.status(500).json({ message: 'Internal server error' });

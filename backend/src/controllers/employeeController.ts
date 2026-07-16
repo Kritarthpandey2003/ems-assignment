@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PrismaClient, Prisma } from '@prisma/client';
+import { PrismaClient, Prisma, Role, Status } from '@prisma/client';
 import bcrypt from 'bcrypt';
 import { AuthRequest } from '../middleware/authMiddleware';
 
@@ -27,8 +27,8 @@ export const getAllEmployees = async (req: Request, res: Response) => {
         { email: { contains: String(search) } }
       ] : undefined,
       department: department ? String(department) : undefined,
-      role: role ? String(role) : undefined,
-      status: status ? String(status) : undefined,
+      role: role ? (String(role) as Role) : undefined,
+      status: status ? (String(status) as Status) : undefined,
     };
 
     const [employees, total] = await Promise.all([
