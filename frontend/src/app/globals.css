@@ -122,9 +122,20 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-[#f3e5f5] via-[#e8eaf6] to-[#e1f5fe] text-foreground min-h-screen bg-fixed;
+  }
+  .dark body {
+    @apply bg-gradient-to-br from-[#4a148c] via-[#311b92] to-[#01579b];
   }
   html {
     @apply font-sans;
   }
+}
+
+.glass-card {
+  @apply bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[1.5rem] shadow-xl;
+}
+
+.glass-panel {
+  @apply bg-white/30 dark:bg-black/30 backdrop-blur-md border border-white/30 dark:border-white/10 rounded-2xl shadow-lg;
 }

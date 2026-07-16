@@ -125,7 +125,7 @@ export default function EmployeesPage() {
         </div>
       </div>
 
-      <div className="border rounded-md bg-white dark:bg-neutral-950">
+      <div className="glass-panel overflow-hidden">
         <Table>
           <TableHeader>
             <TableRow>

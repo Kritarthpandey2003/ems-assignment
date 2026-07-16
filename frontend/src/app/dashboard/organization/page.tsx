@@ -57,11 +57,9 @@ export default function OrganizationPage() {
         </h2>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Company Structure</CardTitle>
-        </CardHeader>
-        <CardContent>
+      <div className="glass-panel p-6">
+        <h3 className="text-xl font-bold mb-6">Company Structure</h3>
+        <div className="pt-2">
           {loading ? (
             <div className="text-center py-10">Loading tree...</div>
           ) : tree.length === 0 ? (
@@ -73,8 +71,8 @@ export default function OrganizationPage() {
               ))}
             </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }
