@@ -37,9 +37,10 @@ export default function EmployeesPage() {
     try {
       await api.post('/employees', formData);
       setIsAddOpen(false);
+      setFormData({ name: '', email: '', password: '', role: 'EMPLOYEE', department: '' });
       fetchEmployees();
-    } catch (error) {
-      alert("Failed to add employee");
+    } catch (error: any) {
+      alert(error.response?.data?.message || "Failed to add employee");
     }
   };
 
