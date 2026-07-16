@@ -1,29 +1,18 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
-
-    // Environment Settings
     "module": "CommonJS",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "target": "esnext",
-    "types": [],
     "esModuleInterop": true,
-
-    // Other Outputs
     "sourceMap": true,
     "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Recommended Options
     "strict": true,
-    "jsx": "react-jsx",
     "isolatedModules": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*", "prisma/**/*", "*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
