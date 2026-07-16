@@ -4,11 +4,12 @@ A Full Stack Employee Management System built with Next.js, Node.js, Express, an
 
 ## Features
 
+- **Premium Glassmorphism UI:** Stunning, state-of-the-art UI utilizing translucent panels, blurred backgrounds, and vibrant gradients.
 - **Role-Based Access Control (RBAC):** Secure authentication with JWT. Roles include Super Admin, HR Manager, and Employee, each with distinct permissions.
-- **Premium Dashboard:** Modern, responsive dashboard featuring key metrics and a department distribution pie chart (Recharts).
+- **Public Sign Up:** New users can securely sign up and create their own employee accounts using the `/signup` route.
 - **Employee Management:** Full CRUD operations for employees with server-side pagination, search, and filtering.
+- **Attendance & Analytics Dashboard:** Real-time data visualization (Recharts), dynamic employee counters, and a dedicated Attendance tracking module showing active vs. inactive employees.
 - **Organizational Hierarchy:** Visual representation of the reporting structure and cycle-detection to prevent circular reporting assignments.
-- **Modern UI/UX:** Built using Next.js App Router, Tailwind CSS, and shadcn/ui components with a responsive design and Dark Mode support.
 - **Soft Delete:** Employees are softly deleted (flagged as deleted in the database) instead of permanently removed, ensuring data integrity.
 
 ## Tech Stack
