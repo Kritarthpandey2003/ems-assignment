@@ -17,6 +17,20 @@ A Full Stack Employee Management System built with Next.js, Node.js, Express, an
 - **Backend:** Node.js, Express.js, TypeScript, Zod (Validation), Prisma ORM.
 - **Database:** SQLite (Default for easy local setup). A `docker-compose.yml` for PostgreSQL is also provided.
 
+## Live Demo
+
+- **Frontend (Vercel):** [https://ems-assignment.vercel.app](https://ems-assignment.vercel.app)
+- **Backend API (Render):** [https://ems-assignment-oszn.onrender.com/api](https://ems-assignment-oszn.onrender.com/api)
+
+## Default Credentials
+
+To explore the live application or test locally, log in with the following seeded Super Admin account:
+
+- **Email:** `admin@ems.com`
+- **Password:** `admin123`
+
+---
+
 ## Getting Started
 
 Follow these instructions to run the project locally.
@@ -76,13 +90,6 @@ npm run dev
 ```
 
 The frontend application will run on `http://localhost:3000`.
-
-## Default Credentials
-
-To explore the application, log in with the following seeded Super Admin account:
-
-- **Email:** `admin@ems.com`
-- **Password:** `admin123`
 
 ## API Documentation (Overview)
 
