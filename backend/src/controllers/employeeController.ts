@@ -76,7 +76,7 @@ export const getAllEmployees = async (req: Request, res: Response) => {
 export const getEmployeeById = async (req: Request, res: Response) => {
   try {
     const employee = await prisma.employee.findUnique({
-      where: { id: req.params.id, isDeleted: false },
+      where: { id: req.params.id as string, isDeleted: false },
       select: {
         id: true,
         name: true,
@@ -148,7 +148,7 @@ export const createEmployee = async (req: AuthRequest, res: Response) => {
 
 export const updateEmployee = async (req: AuthRequest, res: Response) => {
   try {
-    const targetId = req.params.id;
+    const targetId = req.params.id as string;
     const { role, salary, password, status, ...rest } = req.body;
     
     const currentUserRole = req.user?.role;
@@ -199,7 +199,7 @@ export const deleteEmployee = async (req: AuthRequest, res: Response) => {
     }
 
     await prisma.employee.update({
-      where: { id: req.params.id },
+      where: { id: req.params.id as string },
       data: { isDeleted: true, deletedAt: new Date() }
     });
 
@@ -213,7 +213,7 @@ export const deleteEmployee = async (req: AuthRequest, res: Response) => {
 export const getReportees = async (req: Request, res: Response) => {
   try {
     const reportees = await prisma.employee.findMany({
-      where: { reportingManagerId: req.params.id, isDeleted: false },
+      where: { reportingManagerId: req.params.id as string, isDeleted: false },
       select: {
         id: true,
         name: true,
@@ -253,7 +253,7 @@ export const assignManager = async (req: AuthRequest, res: Response) => {
     }
 
     await prisma.employee.update({
-      where: { id },
+      where: { id: id as string },
       data: { reportingManagerId: managerId || null }
     });
 
