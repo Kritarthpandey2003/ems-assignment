@@ -122,10 +122,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gradient-to-br from-[#f3e5f5] via-[#e8eaf6] to-[#e1f5fe] text-foreground min-h-screen bg-fixed;
+    @apply bg-gradient-to-br from-[#ff9a9e] via-[#fecfef] to-[#a1c4fd] text-foreground min-h-screen bg-fixed;
   }
   .dark body {
-    @apply bg-gradient-to-br from-[#4a148c] via-[#311b92] to-[#01579b];
+    @apply bg-gradient-to-br from-[#cc2b5e] to-[#753a88];
   }
   html {
     @apply font-sans;
