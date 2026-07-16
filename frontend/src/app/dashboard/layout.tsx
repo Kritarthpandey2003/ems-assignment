@@ -42,6 +42,12 @@ export default function DashboardLayout({
               <Users className="h-5 w-5" />
               Employees
             </Link>
+            <Link href="/dashboard/attendance" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all ${pathname.includes('/attendance') ? 'bg-white/40 dark:bg-white/10 shadow-sm' : 'hover:bg-white/20 dark:hover:bg-white/5'}`}>
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Attendance
+            </Link>
             <Link href="/dashboard/organization" className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all ${pathname.includes('/organization') ? 'bg-white/40 dark:bg-white/10 shadow-sm' : 'hover:bg-white/20 dark:hover:bg-white/5'}`}>
               <Network className="h-5 w-5" />
               Org Chart
