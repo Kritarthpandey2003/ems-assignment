@@ -3,13 +3,20 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-// Since SQLite doesn't support Enums directly via Prisma schema natively in the same way, we can still use String, or Prisma simulates it.
-// Actually Prisma supports Enums natively in Postgres/MySQL but not SQLite.
-// So I will convert Enums to Strings.
+enum Role {
+  SUPER_ADMIN
+  HR_MANAGER
+  EMPLOYEE
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
+}
 
 model Employee {
   id                 String     @id @default(uuid())
@@ -20,8 +27,8 @@ model Employee {
   designation        String?
   salary             Float?
   joiningDate        DateTime?
-  status             String     @default("ACTIVE") // ACTIVE, INACTIVE
-  role               String     @default("EMPLOYEE") // SUPER_ADMIN, HR_MANAGER, EMPLOYEE
+  status             Status     @default(ACTIVE)
+  role               Role       @default(EMPLOYEE)
   password           String
   profileImage       String?
   
