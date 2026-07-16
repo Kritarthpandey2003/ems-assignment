@@ -126,6 +126,27 @@ export default function DashboardPage() {
             )}
           </div>
         </div>
+
+        {/* Calendar Widget */}
+        <div className="glass-panel p-6 h-[400px] flex flex-col justify-center">
+          <h3 className="text-center text-xl font-bold text-indigo-950 dark:text-indigo-100 mb-6">Calendar</h3>
+          <div className="grid grid-cols-7 gap-2 text-center text-sm font-medium text-indigo-950/60 dark:text-indigo-100/60 mb-4">
+            <div>SU</div><div>MO</div><div>TU</div><div>WE</div><div>TH</div><div>FR</div><div>SA</div>
+          </div>
+          <div className="grid grid-cols-7 gap-2 text-center text-base font-medium">
+            <div className="text-indigo-950/30 dark:text-indigo-100/30 p-2">29</div>
+            <div className="text-indigo-950/30 dark:text-indigo-100/30 p-2">30</div>
+            {[...Array(31)].map((_, i) => {
+              const day = i + 1;
+              const isToday = day === new Date().getDate();
+              return (
+                <div key={i} className={`p-2 rounded-xl transition-all ${isToday ? 'bg-indigo-500 text-white shadow-lg scale-110' : 'text-indigo-950 dark:text-indigo-100 hover:bg-white/40 dark:hover:bg-black/20 cursor-pointer'}`}>
+                  {day}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
