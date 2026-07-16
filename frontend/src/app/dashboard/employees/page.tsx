@@ -76,11 +76,9 @@ export default function EmployeesPage() {
         <h2 className="text-2xl font-bold tracking-tight">Employees</h2>
         {(user?.role === 'SUPER_ADMIN' || user?.role === 'HR_MANAGER') && (
           <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
-            <DialogTrigger asChild>
-              <Button className="gap-2">
-                <Plus className="h-4 w-4" />
-                Add Employee
-              </Button>
+            <DialogTrigger render={<Button className="gap-2" />}>
+              <Plus className="h-4 w-4" />
+              Add Employee
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
