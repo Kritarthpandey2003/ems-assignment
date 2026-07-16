@@ -198,6 +198,10 @@ export const deleteEmployee = async (req: AuthRequest, res: Response) => {
       return res.status(403).json({ message: 'Only Super Admins can delete employees' });
     }
 
+    if (req.user?.id === req.params.id) {
+      return res.status(400).json({ message: 'You cannot delete your own account' });
+    }
+
     await prisma.employee.update({
       where: { id: req.params.id as string },
       data: { isDeleted: true, deletedAt: new Date() }
