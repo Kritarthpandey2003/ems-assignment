@@ -91,6 +91,21 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      <div className="grid gap-6 grid-cols-3 mb-6">
+        <div className="glass-panel py-4 px-6 flex flex-col items-center justify-center col-span-3 sm:col-span-1">
+          <div className="text-sm font-semibold text-indigo-950/70 dark:text-indigo-100/70 mb-1 uppercase tracking-wider">Attendance</div>
+          <div className="text-3xl font-bold text-indigo-950 dark:text-indigo-100">30</div>
+        </div>
+        <div className="glass-panel py-4 px-6 flex flex-col items-center justify-center col-span-3 sm:col-span-1">
+          <div className="text-sm font-semibold text-orange-600/70 dark:text-orange-300/70 mb-1 uppercase tracking-wider">Late</div>
+          <div className="text-3xl font-bold text-orange-600 dark:text-orange-300">3</div>
+        </div>
+        <div className="glass-panel py-4 px-6 flex flex-col items-center justify-center col-span-3 sm:col-span-1">
+          <div className="text-sm font-semibold text-red-600/70 dark:text-red-300/70 mb-1 uppercase tracking-wider">Absent</div>
+          <div className="text-3xl font-bold text-red-600 dark:text-red-300">2</div>
+        </div>
+      </div>
+
       <div className="grid gap-6 md:grid-cols-2">
         <div className="glass-panel p-6 h-[400px] flex flex-col">
           <div className="flex justify-between items-center mb-6">
