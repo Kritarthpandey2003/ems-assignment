@@ -92,22 +92,9 @@ npm run dev
 
 The frontend application will run on `http://localhost:3000`.
 
-## API Documentation (Overview)
+## API Documentation
 
-### Auth
-- `POST /api/auth/login`: Authenticate and receive a JWT.
-- `GET /api/auth/me`: Get current authenticated user details.
-
-### Employees
-- `GET /api/employees`: List employees (supports `page`, `limit`, `search`, `department`, `role`, `status` query params).
-- `POST /api/employees`: Create a new employee (Requires Admin/HR).
-- `GET /api/employees/:id`: Get a specific employee.
-- `PUT /api/employees/:id`: Update an employee.
-- `DELETE /api/employees/:id`: Soft delete an employee (Requires Super Admin).
-- `PATCH /api/employees/:id/manager`: Assign a reporting manager to an employee (Includes cycle detection).
-
-### Organization
-- `GET /api/organization/tree`: Get the hierarchical tree of all active employees.
+For a detailed list of all endpoints, authentication requirements, and JSON payload structures, please refer to the dedicated [API Documentation](./API_DOCUMENTATION.md) file included in this repository.
 
 ## License
 
